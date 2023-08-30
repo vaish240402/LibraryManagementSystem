@@ -1,1 +1,24 @@
+package system;
+
+public class Main {
+    public static void main(String[] args) {
+        Library library = new Library();
+
+        // Add books
+        library.addBook(new Book("The Great Gatsby", "F. Scott Fitzgerald", 1925));
+        library.addBook(new Book("To Kill a Mockingbird", "Harper Lee", 1960));
+        library.addBook(new Book("1984", "George Orwell", 1949));
+
+        // Search for a book by title
+        Book book = library.searchByTitle("The Great Gatsby");
+        if (book != null) {
+            System.out.println("Book found: " + book);
+        } else {
+            System.out.println("Book not found.");
+        }
+
+        // Display all books
+        library.displayAllBooks();
+    }
+}
 
